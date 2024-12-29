@@ -17,8 +17,6 @@ model = joblib.load('CatBoost.pkl')
 
 # 特征范围定义（根据提供的特征范围和数据类型）
 feature_ranges = {
-    "Intrapartum pain": {"type": "numerical", "min": 0, "max": 10, "default": 5},
-    "Postpartum pain": {"type": "numerical", "min": 0, "max": 10, "default": 5},
     "Resilience": {"type": "numerical", "min": 6, "max": 30, "default": 18},
     "Family support": {"type": "numerical", "min": 0, "max": 10, "default": 5},
     "Psychological birth trauma": {"type": "numerical", "min": 0, "max": 42, "default": 14},
@@ -34,6 +32,8 @@ feature_ranges = {
     "Breastfeeding": {"type": "categorical", "options": [1, 2]},
     "Rooming in": {"type": "categorical", "options": [1, 2]},
     "Planned pregnancy": {"type": "categorical", "options": [1, 2]},
+    "Intrapartum pain": {"type": "numerical", "min": 0, "max": 10, "default": 5},
+    "Postpartum pain": {"type": "numerical", "min": 0, "max": 10, "default": 5},
 }
 
 # Streamlit 界面
